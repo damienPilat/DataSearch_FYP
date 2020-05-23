@@ -1,0 +1,105 @@
+<!--
+    DataSearch -> Version 11v2
+    Comparison Page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--  Meta tags  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--  Web App Title  -->
+        <title>DataSearch - Comparison</title>
+
+        <!--  CSS  -->
+        <!--  Bootstrap CSS  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--  Custom CSS  -->
+        <link rel="stylesheet" href="../chartStyle.css">
+
+        <!-- JQuery -->
+        <script data-require="jquery@2.2.4" data-semver="2.2.4" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- Bootstarp CSS -->
+        <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <!-- Bootstrap JS -->
+        <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Bootstarp Select -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+        <!-- Bootstrap Select Css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css" />
+
+
+        <!--  JS Libraries  -->
+        <!--  Chart.js Lib  -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+
+        <!--  D3 Libraries  -->
+        <!--  D3 library  -->
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <!--  DataMaps Lib  -->
+        <script src="../static/datamaps.world.min.js"></script>
+
+        <!--  Open and Set all Data  -->
+        <script src="../static/collectData.js"></script>
+        <script src="../static/chartOptions.js"></script>
+
+        <!--  Script for Chart Builds  -->
+        <script src="../static/mainChart.js"></script>
+
+        <!--  Initial scripts on load  -->
+        <script src="../static/initialScripts.js"></script>
+    </head>
+
+    <body onload="initialScript('comparison')">
+        <!--  Header: Title & navbar  -->
+        <div id="header"></div>
+
+        <!--  WorldMap Div  -->
+        <div class="container-fluid" id="comparisonMap"></div>
+
+        <!--  CHARTS  -->
+        <div class="container">
+            <!--  Country Header  -->
+            <div class="row align-items-center">
+                <div class="col-4"></div>
+                <h1 id="comp-country-header"></h1>
+            </div>
+            <div class="row">
+                <!--  Trade Comparison  -->
+                <div class="col-md-6"><canvas id="tradeComp"></canvas></div>
+                <!--  Commodities Comparison  -->
+                <div class="col-md-6"><canvas id="commodComp"></canvas></div>
+            </div>
+            <div class="row">
+                <!--  Energy Comparison  -->
+                <div class="col-md-6"><canvas id="energyComp"></canvas></div>
+                <!--  Emmision Comparison  -->
+                <div class="col-md-6"><canvas id="emissionComp"></canvas></div>
+            </div>
+        </div>
+
+        <!--  Footer  -->
+        <div id="footer"></div>
+
+        <!--  SCRIPTS  -->
+        <!--  Load Header  -->
+        <script>$("#header").load("header.html");</script>
+        <script>$("#footer").load("footer.html");</script>
+
+        <!--  WorldMap Script -->
+        <script src="../static/worldMap.js"></script>
+
+                <!--  SCRIPTS  -->
+        <!--  Load Header  -->
+        <script>$("#header").load("header.html");</script>
+
+        <!--  WorldMap Script -->
+        <script src="../static/worldMap.js"></script>
+
+        <!--  Popper.js & Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

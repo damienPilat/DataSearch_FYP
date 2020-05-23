@@ -1,0 +1,18 @@
+<!--  WebApp Header  -->
+
+<!--  class: navbar class, expand at small, nav content color, nav bg color, center text -->
+<nav class="navbar navbar-fixed-top navbar-expand-sm navbar-light bg-light justify-content-center" id="headerBar">
+    <a class="navbar-brand" href="index.html" id="logo">DataSearch</a>
+    <!-- Div for nav items -->
+    <div class="navbar-nav">
+        <!--  Link: History  -->
+        <a class="nav-item nav-link" id="history" href="history.html" onclick="changeClass('history')">History</a>
+        <!--  Link: Home [MAIN]  -->
+        <a class="nav-item nav-link active" id="index" href="index.html" onclick="changeClass('index')">Home</a>
+        <!--  Link: Comparison  -->
+        <a class="nav-item nav-link" id="comparison" href="comparison.html" onclick="changeClass('comparison')">Comparison</a>
+
+        <!--  Bootstrap-select Search Bar  -->
+        <select class="selectpicker" data-live-search="true" title="Search" data-width="170px" data-size=10 data-container="body" id="searchSelect"></select>
+    </div>
+</nav>

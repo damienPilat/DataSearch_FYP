@@ -1,0 +1,132 @@
+<!--
+    DataSearch -> Version 11v4
+    Main Page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--  Meta tags  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--  Web App Title  -->
+        <title>DataSearch - v11_v4</title>
+
+        <!--  CSS  -->
+        <!--  Bootstrap CSS  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--  Custom CSS  -->
+        <link rel="stylesheet" href="../chartStyle.css">
+
+         <!-- JQuery -->
+        <script data-require="jquery@2.2.4" data-semver="2.2.4" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- Bootstarp CSS -->
+        <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <!-- Bootstrap JS -->
+        <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Bootstarp Select -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+        <!-- Bootstrap Select Css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css" />
+
+        <!--  JS Libraries  -->
+        <!--  Chart.js Lib  -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+
+        <!--  D3 Libraries  -->
+        <!--  D3 library  -->
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <!--  DataMaps Lib  -->
+        <script src="../static/datamaps.world.min.js"></script>
+
+        <!--  Open and Set all Data  -->
+        <script src="../static/collectData.js"></script>
+        <script src="../static/chartOptions.js"></script>
+
+        <!--  Script for Chart Builds  -->
+        <script src="../static/mainChart.js"></script>
+
+        <!--  Initial scripts on load  -->
+        <script src="../static/initialScripts.js"></script>
+    </head>
+
+    <!--  onload: WorldMap & BuildChart  -->
+    <body onload="initialScript('index')">
+
+        <!--  Header: Title & navbar  -->
+        <div id="header"></div>
+
+<!--  Page Description  -->
+        <div class="d-flex justify-content-center">
+<!--            <h1>ADD TOOLTIP OR UNIT EXPLANAITION TO CHARTS</h1>-->
+            <span>Welcome to DataSearch, the platform for all main Trade, Commodities, Energy and Emissions Data</span>
+        </div>
+
+
+        <!--  MAIN CONTENTS  -->
+        <div class="d-flex flex-row">
+
+            <!--  Spacer  -->
+            <div class="col-md-2"></div>
+
+            <!--  WorldMap & Graphs  -->
+            <div class="col-md-8">
+                <!--  World Map  -->
+                <div class="row"><div id="worldMapMain"></div></div>
+
+                <!--  Top Graphs: Trade & Commodities  -->
+                <div class="row">
+                    <!--  Trade Div & canvas  -->
+                    <div class="col-md-6 chart-main">
+                        <canvas id="tradeCanvas"></canvas><a id="download_Trade"></a>
+                    </div><!-- END: Trade Div-->
+
+                    <!--  Commodities Div & canvas  -->
+                    <div class="col-md-6 chart-main">
+                        <canvas id="commodCanvas"></canvas><a id="download_Commodities"></a>
+                    </div><!-- END: Commodities Div -->
+
+                </div><!--  END: Top Graphs  -->
+
+                <!--  Bottom Graphs: Energy & Emissions  -->
+                <div class="row">
+                    <!--  Energy Div & canvas  -->
+                    <div class="col-md-6 chart-main">
+                        <canvas id="energyCanvas"></canvas><a id="download_Energy"></a>
+                    </div>
+                    <!--  Waste Div & canvas  -->
+                    <div class="col-md-6 chart-main">
+                        <canvas id="emissionCanvas"></canvas><a id="download_Emission"></a>
+                    </div>
+                </div><!--  END: Bottom Graphs  -->
+            </div><!--  END: WorldMap & Graphs  -->
+
+            <!--  Country Header  -->
+            <div class="col-md-1 align-middle">
+                <div class="float-right">
+                    <h1 id="country-header"></h1>
+                </div>
+
+            </div><!--  END: Country Header  -->
+        </div><!--  END: MAIN CONTENTS  -->
+
+
+        <!--  Footer  -->
+        <div id="footer"></div>
+
+
+        <!--  SCRIPTS  -->
+        <!--  Load Header  -->
+        <script>$("#header").load("header.html");</script>
+        <script>$("#footer").load("footer.html");</script>
+
+        <!--  WorldMap Script -->
+        <script src="../static/worldMap.js"></script>
+
+        <!--  jQuerry, Popper.js & Bootstrap JS-->
+<!--        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

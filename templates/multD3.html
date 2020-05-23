@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mult d3</title>
+</head>
+<body>
+	<!-- Load d3v5 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+	<script>
+		d3v5 = d3;
+		window.d3 = null;
+	</script>
+	<!-- load d3v3 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.0/d3.min.js"></script>
+	<script>
+		d3v3 = d3;
+		window.d3 = null;
+	</script>
+	<script>
+		var tradeD, commD;
+		console.log('v3:', d3v3.version);
+		console.log('v5:', d3v5.version);
+
+		Promise.all([
+				d3v5.csv('../data/Trade_Country.csv'),
+				d3v5.csv('../data/Commodities_Country.csv'),
+		]).then(function (files) {
+			tradeD = files[0];
+			commD = files[1];
+			alert("Data successfully loaded");
+		}).catch(function (err) {
+			alert("could not load data.");
+		});
+	</script>
+
+
+</body>
+</html>

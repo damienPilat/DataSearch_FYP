@@ -1,0 +1,131 @@
+/*
+    CSS for Version 11v2
+ */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Accommodate Header & Footer */
+    padding: 40px 0 100px 0;
+    margin-bottom: 60px;
+    /* Gradient Background */
+    /*background: rgb(142,212,242);*/
+    /*background: linear-gradient(45deg, rgba(142,212,242,1) 0%, rgba(255,255,255,1) 41%);*/
+
+    background: rgb(255,255,255);
+    background: linear-gradient(35deg, rgba(255,255,255,1) 70%, rgba(142,212,242,0.8) 100%);
+    border: 0;
+
+    /* Text color*/
+    color: #687864 !important;
+}
+
+#headerBar{
+    /* Layout*/
+    position: fixed;
+    /* Gradient Background */
+    /*background: rgb(142,212,242);*/
+    /*background: linear-gradient(10deg, rgba(142,212,242,1) 0%, rgba(255,255,255,1) 100%);*/
+
+    background: rgb(255,255,255);
+    background: linear-gradient(10deg, rgba(255,255,255,1) 0%, rgba(142,212,242,1) 100%);
+    border: 0;
+}
+
+#logo{
+    font-size: 24px;
+}
+
+/* Side Country Div */
+#country-header {
+    /* Text */
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    font-size: 70px;
+    color: #687864;
+    /* Size */
+    height: 80vh;
+    min-height: 180px;
+    /* Layout */
+    position: fixed;
+    vertical-align: middle;
+    padding-top: 40px;
+}
+
+
+/* Map on index */
+#worldMapMain {
+    position: relative;             /* allow for resize */
+    width: 60vw;                    /* set width */
+    margin: -7% auto auto auto;     /* Margin (move up) */
+    padding-bottom: 45% !important; /* Allow next divs to be closer */
+}
+
+/* Charts - dynamic resize */
+.chart-main {
+    position: relative;
+    margin: auto;
+    height: 40vh;
+    width: 40vw;
+}
+
+/* Scroll Menu - country list */
+div#countryList {
+    overflow: auto;
+    white-space: nowrap;
+}
+div#countryList a {
+    display: inline-block;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+}
+div#countryList a:hover {
+    text-decoration: inherit;
+}
+
+
+/* LINKS */
+/* allLinks (built for DataSearch logo link) */
+a {
+    color: rgb(24,24,25);               /* default color */
+    background-color: transparent !important;      /* default background color */
+    text-decoration: none;              /* default decoration (line) */
+}
+a:link {
+    color: inherit;                     /* inherit ALL from parent */
+    background-color: inherit;
+    text-decoration: inherit;
+}
+a:hover {
+    color: inherit;                     /* inherit ALL from parent */
+    background-color: inherit;
+    text-decoration: inherit;
+}
+a:visited {
+    color: inherit;                     /* inherit ALL from parent */
+    background-color: inherit;
+    text-decoration: inherit;
+}
+a:active {
+    color: inherit;                     /* inherit ALL from parent */
+    background-color: inherit;
+    text-decoration: inherit;
+}
+
+/* FOOTER */
+.footer {
+    /* Style */
+    line-height: 60px;
+    background: rgb(142,212,242);
+    background: linear-gradient(7deg, rgba(142,212,242,1) 0%, rgba(255,255,255,1) 90%);
+    border:0px;
+    /* Size */
+    width: 100%;
+    height: 60px;
+    /* Layout */
+    position: absolute;
+    bottom: 0;
+}

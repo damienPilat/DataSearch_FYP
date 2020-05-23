@@ -1,0 +1,33 @@
+<footer class="footer">
+    <div class="container">
+        <div class="d-flex flex-row">
+            <span class="col-md-3 text-muted">Footer of <em>SearchData</em></span>
+            <span class="col-md-5"></span>
+            <span class="col-md-3 text-right">Download <em>SearchData</em> Datest</span>
+            <a class="col-md-1" id="footer_Dataset"></a>
+        </div>
+
+    </div>
+</footer>
+
+
+
+<!--  DATASET DOWNLOAD  -->
+<script>
+    let dataDown = document.getElementById("footer_Dataset");
+    dataDown.className = "btn btn-primary float-right bg-flat-color-1";
+    dataDown.download = "SearchData_Dataset.zip";
+    dataDown.href = "";
+    dataDown.title = "SearchData - Dataset Download";
+
+    let downImg = document.createElement("img");
+    downImg.src = "archive.svg";
+    downImg.setAttribute("width", "20em");
+    downImg.setAttribute("height", "20em");
+    dataDown.appendChild(downImg);
+
+    document.getElementById("footer_Dataset").addEventListener('click', function() {
+        let dataBtn = document.getElementById("footer_Dataset");
+        dataBtn.href = "../data/Dataset.zip";
+    });
+</script>

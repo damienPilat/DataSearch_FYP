@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test JSON</title>
+    <!--  JQuerry  -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+ <script>
+     var currentCountry = 'Canada';
+
+     $.getJSON('../data/projectData.json', callBack);
+
+     function callBack(data) {
+         let countryNames = Object.keys(data);
+
+         for (let i = 0; i < data.length; i++) {
+             // if data
+         }
+
+         console.log(data[currentCountry]);
+     }
+ </script>
+</body>
+</html>

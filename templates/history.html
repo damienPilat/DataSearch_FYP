@@ -1,0 +1,95 @@
+<!--
+    FYP Project v.10 -> History Page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--  Meta tags  -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--  Web App Title  -->
+        <title>DataSearch - History</title>
+
+        <!--  CSS  -->
+        <!--  Bootstrap CSS  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--  Custom CSS  -->
+        <link rel="stylesheet" href="../chartStyle.css">
+
+        <!-- JQuery -->
+        <script data-require="jquery@2.2.4" data-semver="2.2.4" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- Bootstarp CSS -->
+        <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <!-- Bootstrap JS -->
+        <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Bootstarp Select -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+        <!-- Bootstrap Select Css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css" />
+
+
+        <!--  JS Libraries  -->
+        <!--  Chart.js Lib  -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+
+        <!--  D3 Libraries  -->
+        <!--  D3 library  -->
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script><script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+
+        <!--  DataMaps Lib  -->
+        <script src="../static/datamaps.world.min.js"></script>
+
+        <!--  Open and Set all Data  -->
+        <script src="../static/collectData.js"></script>
+        <script src="../static/chartOptions.js"></script>
+
+        <!--  Country Desc  -->
+        <script src="../static/countryDescription.js"></script>
+
+        <!--  Script for Chart Builds  -->
+        <script src="../static/mainChart.js"></script>
+
+        <!--  Initial scripts on load  -->
+        <script src="../static/initialScripts.js"></script>
+    </head>
+
+    <body onload="initialScript('history');">
+        <!--  Header: Title & navbar  -->
+        <div id="header"></div>
+
+        <!--  WorldMap Div  -->
+        <div class="container-fluid" id="historyWorldMap"></div>
+
+        <!--  Country Details & Charts  -->
+        <div class="container">
+            <!--  Country Details  -->
+            <class class="row align-items-center">
+                <div class="col-6">
+                    <h3>Description of country</h3>
+                    <p id="countryDesc"></p>
+                </div>
+                <!--  Country Map  -->
+                <div class="col-4"><svg id="countryMap" width="400" height="300"></svg></div>
+            </class>
+
+            <!--  Country Charts  -->
+            <div class="row align-items-center"><div class="col-10"><canvas id="yearlyTradeCanvas"></canvas></div></div>
+            <div class="row align-items-center"><div class="col-10"><canvas id="yearlyCommoditiesCanvas"></canvas></div></div>
+            <div class="row align-items-center"><div class="col-10"><canvas id="yearlyEnergyCanvas"></canvas></div></div>
+            <div class="row align-items-center"><div class="col-10"><canvas id="yearlyEmissionCanvas"></canvas></div></div>
+        </div>
+
+        <!--  Footer  -->
+        <div id="footer"></div>
+
+        <!--  SCRIPTS  -->
+        <!--  Load Header  -->
+        <script>$("#header").load("header.html");</script>
+        <script>$("#footer").load("footer.html");</script>
+
+    </body>
+</html>
