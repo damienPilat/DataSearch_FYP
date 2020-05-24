@@ -7,7 +7,8 @@ Welcome to the repo for the DataSearch Website created as part of the Final Year
 The website code is structured in three directories:
     data: All the data used in this website,
     static: All code (js, py) used,
-    templates: All HTML and CSS files used.
+    templates: All HTML and CSS files used,
+    reportData: data used in the report.
 
 Main libraries used:
 DataMaps for World Maps,
