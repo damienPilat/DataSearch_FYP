@@ -13,5 +13,6 @@ The website code is structured in three directories:
 Main libraries used:
 DataMaps for World Maps,
 Charts.js for all Charts,
+Bootstrap for web style.
 
 All code was created by me, Damien Pilat (2020) unless otherwise specified.
