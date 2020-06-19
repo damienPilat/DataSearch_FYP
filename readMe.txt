@@ -10,6 +10,8 @@ The website code is structured in three directories:
     templates: All HTML and CSS files used,
     reportData: data used in the report.
 
+This project can be accessed from: webprojects.eecs.qmul.ac.uk/dp309/Project/templates
+
 Main libraries used:
 DataMaps for World Maps,
 Charts.js for all Charts,
